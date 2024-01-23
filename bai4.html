@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text{
+            font-size: 40px;
+            font-weight: 600;
+        }
+        button{
+            margin-top: 50px;
+            padding: 10px 5px;
+            background-color:brown ;
+            color: white;
+            border-radius: 5px;
+            border-color: transparent;
+        }
+        button:hover{
+            color: grey;
+        }
+        .style{
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        This text is optional
+    </div>
+    <button class="button" onclick="change()">Press to say hide text</button>
+    <script>
+    //    document.getElementsByClassName("button").addEventListener("click",change)
+        function change(){
+            var a=document.getElementById("text").classList;
+            a.add("style");
+        }
+    </script>
+</body>
+</html>

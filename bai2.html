@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+        button{
+            background-color: rgb(148, 148, 159);
+            border-radius: 5px;
+            padding: 10px;
+            color: aliceblue;
+            border-color: transparent;
+        }
+        button:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+         <button id="hi">Press to say hi</button>
+    </div>
+    <script>
+        document.getElementById("hi").addEventListener("click",myFunction);
+        function myFunction(){
+            alert("Hello World");
+        }
+    </script>
+</body>
+</html>

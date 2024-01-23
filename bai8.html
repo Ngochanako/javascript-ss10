@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td{
+            border: 1px solid black;
+        }
+        td{
+            padding: 5px;
+        }
+        button{
+            color: grey;
+            background-color: greenyellow;
+            padding: 10px;
+            border-radius: 10px;
+            border-color: transparent;
+        }
+        button:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table id="myTable">
+    <tr>
+        <td>Cell 1 row 1</td>
+        <td>Cell 2 row 1</td>
+        <td>Cell 3 row 1</td>
+        <td><button onclick="delRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+        <td>Cell 1 row 2</td>
+        <td>Cell 2 row 2</td>
+        <td>Cell 3 row 2</td>
+        <td><button onclick="delRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+        <td>Cell 1 row 3</td>
+        <td>Cell 2 row 3</td>
+        <td>Cell 3 row 3</td>
+        <td><button onclick="delRow(this)">Delete</button></td>
+    </tr>
+</table>
+    
+    <script>
+        function delRow(button){
+            var row=button.parentNode.parentNode;
+            var table=row.parentNode;
+            var rowIndex=row.rowIndex;
+            table.deleteRow(rowIndex);
+        }  
+    </script>
+</body>
+</html>

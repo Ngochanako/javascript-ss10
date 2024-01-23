@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .addItem{
+            display: flex;
+            gap: 20px;
+        }
+        input{
+            border-radius: 20px;
+            padding: 10px;
+        }
+        button{
+            background-color: green;
+            border-radius: 5px ;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="addItem">
+        <input type="text" id="input">
+        <button id="button">add item</button>
+    </div>
+         
+    <script>
+       
+        let ulElement=document.createElement("ul");
+        document.body.append(ulElement);
+        document.getElementById("button").addEventListener("click",add);
+        function add(){
+            let inputText=document.getElementById("input").value;
+            let liElement=document.createElement("li");
+            liElement.innerHTML=inputText;
+            ulElement.appendChild(liElement);
+        }
+    </script>
+</body>
+</html>
